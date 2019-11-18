@@ -1,18 +1,30 @@
 {
-  "name": "workshop-lib",
+  "name": "tb-awesome-ui",
+  "description": "An example of a simple React NPM library",
   "version": "0.1.0",
-  "private": true,
+  "private": false,
   "dependencies": {
     "react": "^16.11.0",
     "react-dom": "^16.11.0",
     "react-scripts": "3.2.0",
     "styled-components": "^4.4.1"
   },
+  "devDependencies": {
+    "@babel/cli": "^7.7.0",
+    "@babel/preset-react": "^7.7.0",
+    "babel-plugin-styled-components": "^1.10.6"
+  },
+  "babel": {
+    "presets": [
+      "@babel/preset-react"
+    ]
+  },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "publish:npm": "rm -rf dist && mkdir dist &&  babel src/components -d dist --copy-files"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -28,8 +40,5 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-  },
-  "devDependencies": {
-    "babel-plugin-styled-components": "^1.10.6"
   }
 }
