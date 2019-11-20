@@ -15,7 +15,7 @@ const config = {
     babel({
       exclude: "node_modules/**"
     }),
-    uglify()
+    uglify
   ]
 };
 export default config;
